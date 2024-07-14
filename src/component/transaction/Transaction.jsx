@@ -89,14 +89,14 @@ function Transaction() {
 
   return (
     <>
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg my-8 w-11/12 mx-auto">
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg my-8 sm:w-11/12 w-full mx-auto">
         <div className="flex flex-col sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center  justify-between pb-4">
-          <div className="flex gap-x-3">
+          <div className="flex-col md:gap-x-3 sm:flex-row flex gap-2 justify-start items-start w-full p-2 ">
             <label htmlFor="amount-filter" className="sr-only">
               filter
             </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
+            <div className="relative w-full">
+              <div className="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center  ps-3 pointer-events-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -115,7 +115,7 @@ function Transaction() {
               <input
                 type="number"
                 id="amount-filter"
-                className="block p-2 ps-10 rtl:pe-10 rtl:ps-4 w-80 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block p-2 ps-10 rtl:pe-10 rtl:ps-4 md:w-80 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="filter by  amount"
                 onInput={(e) => handleFillterAmout(e.target.value)}
                 onBlur={(e) => setAmoutvalue(e.target.value)}
@@ -124,7 +124,7 @@ function Transaction() {
             <label htmlFor="table-search" className="sr-only">
               Search
             </label>
-            <div className="relative">
+            <div className="relative w-full">
               <div className="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
                 <svg
                   className="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -143,7 +143,7 @@ function Transaction() {
               <input
                 type="text"
                 id="table-search"
-                className="block p-2 ps-10 rtl:pe-10 rtl:ps-4 w-80 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block p-2 ps-10 rtl:pe-10 rtl:ps-4  md:w-80 w-full  text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Search for Customers"
                 onChange={(e) => handleSearch(e.target.value)}
                 onBlur={(e) => setSearchvalue(e.target.value)}

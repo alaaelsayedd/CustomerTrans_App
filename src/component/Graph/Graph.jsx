@@ -90,7 +90,7 @@ function Graph() {
     <div className="w-5/6 mx-auto mt-3">
       <div>
         <Link to={'/'}>
-        <button className="bg-blue-500 text-white font-medium  px-3 py-2 rounded-md flex items-center">
+        <button className="bg-blue-500 text-white md:font-medium  font-normal md:px-3 py-2 px-1 rounded-md flex items-center my-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
